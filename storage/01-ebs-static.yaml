@@ -11,3 +11,16 @@ spec:
     driver: ebs.csi.aws.com
     fsType: ext4
     volumeHandle: vol-0d7f568516910beaa
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: test-pvc
+spec:
+  accessModes:
+    - ReadWriteOnce
+  volumeMode: Filesystem
+  resources:
+    requests:
+      storage: 8Gi
+  storageClassName: ""
