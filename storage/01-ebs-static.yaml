@@ -36,6 +36,8 @@ spec:
       volumeMounts:
       - mountPath: "/usr/share/nginx/html"
         name: mypd
+  nodeSelector:
+    zone: 1c
   volumes:
     - name: mypd
       persistentVolumeClaim:
