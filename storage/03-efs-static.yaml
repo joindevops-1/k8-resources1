@@ -58,3 +58,18 @@ spec:
       - name: nginx-html
         persistentVolumeClaim: # this is the PVC
           claimName: efs-static-pvc
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: test-service
+spec:
+  type: LoadBalancer
+  selector:
+    app: nginx
+    project: roboshop
+    component: frontend
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
