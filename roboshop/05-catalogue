@@ -9,7 +9,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: catalogue
-  namespace: roboshop
   labels: # these labels are deployment labels
     app: catalogue
     project: roboshop
