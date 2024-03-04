@@ -45,7 +45,7 @@ metadata:
 spec:
   ingressClassName: alb
   rules:
-  - host: "app1.joindevops.online"
+  - host: "app1.daws76s.online"
     http:
       paths:
       - path: /
