@@ -2,6 +2,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: web
+  namespace: roboshop
 data:
   nginx.conf: |
     user www-data;
@@ -113,6 +114,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: web
+  namespace: roboshop
   labels: # these labels are deployment labels
     app: web
     project: roboshop
@@ -152,6 +154,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: web
+  namespace: roboshop
 spec:
   type: LoadBalancer
   selector:
